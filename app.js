@@ -52,17 +52,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let resultSum1 = sum(a,b);
-  let finalSumResult = sum(resultSum1 , c);
+  let resultSum1 = sum(a,b)[0];
+  let finalSumResult = sum(resultSum1 , c)[0];
+  //console.log(finalSumResult);
 
-  let resultMultiply1 = multiply(a,b);
-  let finalMultiplyResult = multiply(resultMultiply1 , c);
-
-  return [finalSumResult ,
-          finalMultiplyResult,
-          `${a} and ${b} and ${c} sum to ${finalSumResult}.`,
-          `The product of ${a} and ${b} and ${c} is ${finalMultiplyResult}.`
-  ];
+  let resultMultiply1 = multiply(a,b)[0];
+  let finalMultiplyResult = multiply(resultMultiply1 , c)[0];
+  //console.log(finalMultiplyResult);
+  return [finalSumResult,finalMultiplyResult,`${a} and ${b} and ${c} sum to ${finalSumResult}.`,`The product of ${a} and ${b} and ${c} is ${finalMultiplyResult}.`];
 
   //eslint-disable-line
 }
